@@ -5,7 +5,10 @@ WORKDIR /app
 
 COPY . .
 
-RUN chmod +x gradlew
+# RUN chmod +x gradlew
+
+# RUN ./gradlew clean bootJar --no-daemon
+RUN sed -i 's/\r$//' gradlew && chmod +x gradlew
 
 RUN ./gradlew clean bootJar --no-daemon
 
