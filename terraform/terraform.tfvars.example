@@ -1,0 +1,22 @@
+application_name = "case-tracker"
+environment      = "production"
+location         = "uksouth"
+
+container_image = "ghcr.io/example/hmcts-dev-test-backend:replace-with-git-sha"
+
+database_name                = "devtest"
+database_administrator_login = "caseadmin"
+
+# Do not place a real password in this file.
+# Supply it through the environment variable:
+# TF_VAR_database_administrator_password
+database_administrator_password = "replace-with-secure-pipeline-secret"
+
+minimum_replicas = 1
+maximum_replicas = 3
+
+tags = {
+  managed-by = "terraform"
+  service    = "case-tracker"
+  owner      = "hmcts"
+}

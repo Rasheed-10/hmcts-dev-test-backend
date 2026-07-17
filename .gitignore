@@ -24,3 +24,11 @@ bin/main/application.yaml
 applicationinsights-agent-*.jar
 *.log
 .env
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+terraform.tfvars
+*.tfplan
+crash.log
